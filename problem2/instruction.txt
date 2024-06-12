@@ -1,0 +1,4 @@
+Instruksi!
+1. Save tugas dalam pentuk format gambar JPG
+2. Save gambar tersebut pada folder ini!
+3. Lakukan commit dan push!
