@@ -1,0 +1,33 @@
+1. Mulai
+2. Inisialisasi N = 1000221
+3. Inisialisasi fourDiv sebagai array dengan semua elemen False sepanjang N+1
+4. Fungsi fourDistinctFactors:
+   4.1. Inisialisasi primeAll sebagai array dengan semua elemen True sepanjang N+1
+   4.2. Set p = 2
+   4.3. Loop: Selama p * p <= N:
+        - Jika primeAll[p] == True:
+          4.3.1. Set i = p * 2
+          4.3.2. Loop: Selama i <= N:
+               - Set primeAll[i] = False
+               - Set i = i + p
+        - Set p = p + 1
+   4.4. Buat list prime sebagai array kosong
+   4.5. Loop: Untuk p dari 2 hingga N:
+        - Jika primeAll[p] == True:
+          4.5.1. Append p ke prime
+   4.6. Loop: Untuk setiap i dari 0 hingga panjang prime - 1:
+        - Set p = prime[i]
+        - Jika p * p * p <= N:
+          4.6.1. Set fourDiv[p * p * p] = True
+        - Loop: Untuk setiap j dari i + 1 hingga panjang prime - 1:
+            - Set q = prime[j]
+            - Jika p * q > N, break
+            - Set fourDiv[p * q] = True
+5. Panggil fungsi fourDistinctFactors
+6. Baca input num dari user
+7. Loop: Untuk x dari 2 hingga num - 1:
+     - Jika num % x == 0, break
+8. Jika x + 1 == num, cetak "Ya"
+9. Jika fourDiv[num] == True, cetak "Ya"
+10. Jika tidak, cetak "Tidak"
+11. Selesai
